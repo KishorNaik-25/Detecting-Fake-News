@@ -1,0 +1,5 @@
+[ 2023-09-10 20:28:56,091 ] 28 my_custom_logger - INFO - DataFrame is uploaded
+[ 2023-09-10 20:28:56,960 ] 32 my_custom_logger - INFO - Raw data is saved in artifacts folder
+[ 2023-09-10 20:28:56,962 ] 35 my_custom_logger - INFO - train and test split is done
+[ 2023-09-10 20:28:57,661 ] 39 my_custom_logger - INFO - train set of data is saved in artificats folder
+[ 2023-09-10 20:28:57,843 ] 43 my_custom_logger - INFO - test set of data is saved in artificats folder

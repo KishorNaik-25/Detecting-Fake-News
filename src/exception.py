@@ -16,12 +16,12 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
 
-if __name__ == "__main__":
-    try:
-        # Simulate an error
-        1 / 0
-    except ZeroDivisionError as error:
-        try:
-            raise CustomException("Custom error message", sys.exc_info()) from None
-        except CustomException as custom_error:
-            print(custom_error)
+# if __name__ == "__main__":
+#     try:
+#         # Simulate an error
+#         1 / 0
+#     except ZeroDivisionError as error:
+#         try:
+#             raise CustomException("Custom error message", sys.exc_info()) from None
+#         except CustomException as custom_error:
+#             print(custom_error)
