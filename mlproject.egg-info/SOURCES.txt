@@ -10,6 +10,10 @@ src/exception.py
 src/logger.py
 src/utils.py
 src/components/Data_Ingestion.py
+src/components/Data_Tranformation.py
 src/components/__init__.py
+src/components/model_trainer.py
 src/pipeline/__init__.py
+src/pipeline/predictive_pipeline.py
+src/pipeline/training_pipeline.py
 templates/__init__.py

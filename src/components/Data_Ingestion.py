@@ -31,7 +31,7 @@ class DataIngestion:
             print("raw_data_saved",self.dataingestion.raw_data_path)
             self.logger.info("Raw data is saved in artifacts folder")
 
-            train_set, test_set = train_test_split(df, test_size = 0.2,random_state = 42)
+            train_set, test_set = train_test_split(df[['text','label']], test_size = 0.2,random_state = 42)
             self.logger.info("train and test split is done")
 
             train_set.to_csv(self.dataingestion.train_data_path, index = False, header = True)

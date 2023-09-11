@@ -6,4 +6,5 @@ dill
 catboost
 xgboost
 Flask
+nltk
 -e .
