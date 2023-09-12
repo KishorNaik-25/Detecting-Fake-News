@@ -1,4 +1,0 @@
-[ 2023-09-11 20:38:06,577 ] 115 my_custom_logger - INFO - Loading training and test data
-[ 2023-09-11 20:38:08,655 ] 124 my_custom_logger - INFO - Preprocessing text data
-[ 2023-09-11 20:39:09,029 ] 129 my_custom_logger - INFO - Training the best model
-[ 2023-09-11 20:39:44,577 ] 132 my_custom_logger - INFO - Evaluating the best model
