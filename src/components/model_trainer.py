@@ -4,7 +4,6 @@ import pickle
 from dataclasses import dataclass
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.svm import SVC  # You can choose a different classifier
-
 from src.exception import CustomException
 from src.logger import CustomLogger
 from src.components.Data_Tranformation import DataTransformation
@@ -58,10 +57,14 @@ class ModelTrainer:
             accuracy = accuracy_score(y_test, y_pred)
             classification_rep = classification_report(y_test, y_pred)
 
+            # Save the trained classifier immediately upon training
+            self.save_trained_model(classifier)
+
             return accuracy, classification_rep, classifier  # Return the trained classifier
 
         except Exception as e:
             raise CustomException(e, sys)
+
 
 # if __name__ == '__main__':
 #     # Replace with the actual file paths for the train and test data

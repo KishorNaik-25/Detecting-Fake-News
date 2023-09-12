@@ -1,9 +1,0 @@
-[ 2023-09-12 12:49:49,941 ] 28 my_custom_logger - INFO - DataFrame is uploaded
-[ 2023-09-12 12:49:51,428 ] 32 my_custom_logger - INFO - Raw data is saved in artifacts folder
-[ 2023-09-12 12:49:51,967 ] 35 my_custom_logger - INFO - train and test split is done
-[ 2023-09-12 12:49:52,763 ] 39 my_custom_logger - INFO - train set of data is saved in artificats folder
-[ 2023-09-12 12:49:52,966 ] 43 my_custom_logger - INFO - test set of data is saved in artificats folder
-[ 2023-09-12 12:49:54,323 ] 52 my_custom_logger - INFO - Read train and test data is completed
-[ 2023-09-12 12:49:54,324 ] 53 my_custom_logger - INFO - Obtaining preprocessing object
-[ 2023-09-12 12:49:54,978 ] 64 my_custom_logger - INFO - Applying preprocessing object on training dataframe and testing dataframe
-[ 2023-09-12 12:50:41,498 ] 72 my_custom_logger - INFO - Saved preprocessing Object.
