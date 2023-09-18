@@ -2,7 +2,7 @@ import os
 import sys
 import pickle
 from dataclasses import dataclass
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.svm import SVC  # You can choose a different classifier
 from src.exception import CustomException
 from src.logger import CustomLogger
@@ -56,33 +56,34 @@ class ModelTrainer:
             # Calculate accuracy and print classification report
             accuracy = accuracy_score(y_test, y_pred)
             classification_rep = classification_report(y_test, y_pred)
+            conf_matrix = confusion_matrix(y_test, y_pred)
 
             # Save the trained classifier immediately upon training
             self.save_trained_model(classifier)
 
-            return accuracy, classification_rep, classifier  # Return the trained classifier
+            return accuracy, classification_rep, conf_matrix , classifier  # Return the trained classifier
 
         except Exception as e:
             raise CustomException(e, sys)
 
 
-# if __name__ == '__main__':
-#     # Replace with the actual file paths for the train and test data
-#     train_path = r'C:\Users\kishu\PycharmProjects\detecting-fake-news\src\components\artifacts\train.csv'
-#     test_path = r'C:\Users\kishu\PycharmProjects\detecting-fake-news\src\components\artifacts\test.csv'
-#
-#     # Create an instance of ModelTrainer
-#     model_trainer = ModelTrainer()
-#
-#     # Load data and preprocessing object
-#     train_arc, test_arc, preprocessing_obj_path = model_trainer.load_data_and_preprocessor(train_path, test_path)
-#
-#     # Train and evaluate the model, and get the trained classifier
-#     accuracy, classification_rep, trained_classifier = model_trainer.train_and_evaluate_model(train_arc, test_arc)
-#
-#     # Save the trained classifier using the ModelTrainer instance
-#     model_trainer.save_trained_model(trained_classifier)
-#
-#     # Print or log the results as needed
-#     print("Model Accuracy:", accuracy)
-#     print("Classification Report:\n", classification_rep)
+if __name__ == '__main__':
+    # Replace with the actual file paths for the train and test data
+    train_path = r'C:\Users\kishu\PycharmProjects\detecting-fake-news\src\pipeline\artifacts\train.csv'
+    test_path = r'C:\Users\kishu\PycharmProjects\detecting-fake-news\src\pipeline\artifacts\test.csv'
+
+    # Create an instance of ModelTrainer
+    model_trainer = ModelTrainer()
+
+    # Load data and preprocessing object
+    train_arc, test_arc, preprocessing_obj_path = model_trainer.load_data_and_preprocessor(train_path, test_path)
+
+    # Train and evaluate the model, and get the trained classifier
+    accuracy, classification_rep, trained_classifier = model_trainer.train_and_evaluate_model(train_arc, test_arc)
+
+    # Save the trained classifier using the ModelTrainer instance
+    model_trainer.save_trained_model(trained_classifier)
+
+    # Print or log the results as needed
+    print("Model Accuracy:", accuracy)
+    print("Classification Report:\n", classification_rep)

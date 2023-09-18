@@ -1,0 +1,4 @@
+[ 2023-09-18 18:48:29,421 ] 52 my_custom_logger - INFO - Read train and test data is completed
+[ 2023-09-18 18:48:29,421 ] 53 my_custom_logger - INFO - Obtaining preprocessing object
+[ 2023-09-18 18:48:30,165 ] 64 my_custom_logger - INFO - Applying preprocessing object on training dataframe and testing dataframe
+[ 2023-09-18 18:49:15,646 ] 72 my_custom_logger - INFO - Saved preprocessing Object.
